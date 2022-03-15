@@ -1,6 +1,8 @@
 from django.contrib import admin
 from .models import *
 
+#pesquisa via admin
+
 class SurveyAdmin(admin.ModelAdmin):
     search_fields = ['title', 'description']
 

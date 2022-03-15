@@ -16,7 +16,7 @@ class SurveyQuestionAlternativeSerializer(serializers.ModelSerializer):
         model = SurveyQuestionAlternative
         fields = '__all__'
 
-class SurveyQuestionAnswer(serializers.ModelSerializer):
+class SurveyUserAnswerSerializer(serializers.ModelSerializer):
     class Meta:
         model = SurveyUserAnswer
         fields = '__all__'

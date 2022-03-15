@@ -13,19 +13,19 @@ def getSurvey(request):
 @api_view(['GET'])
 def getSurveyQuestion(request):
     data = SurveyQuestion.objects.all()
-    serializer = SurveySerializer(data, many=True)
+    serializer = SurveyQuestionSerializer(data, many=True)
     return Response(serializer.data)
 
 @api_view(['GET'])
 def getSurveyQuestionAlternative(request):
     data = SurveyQuestionAlternative.objects.all()
-    serializer = SurveySerializer(data, many=True)
+    serializer = SurveyQuestionAlternativeSerializer(data, many=True)
     return Response(serializer.data)
 
 @api_view(['GET'])
 def getSurveyUserAnswer(request):
-    data = SurveyUserAnswer.objects.all()
-    serializer = SurveySerializer(data, many=True)
+    data = SurveyUserAnswerSerializer.objects.all()
+    serializer = SurveyUserAnswerSerializer(data, many=True)
     return Response(serializer.data)
 
 
